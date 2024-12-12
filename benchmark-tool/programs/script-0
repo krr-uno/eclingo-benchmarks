@@ -1,0 +1,12 @@
+#!/bin/bash
+
+let mem=$1
+shift
+let to=$1
+shift
+MY_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
+# Execute Runsolver to get the statistics of each test for the benchmark.
+${MY_PATH}/runsolver -M $mem -w runsolver.watcher -o runsolver.solver -W $to $@
+
+# runsolver-3.3.7beta -M $mem -w runsolver.watcher -o runsolver.solver -W $to $@
+

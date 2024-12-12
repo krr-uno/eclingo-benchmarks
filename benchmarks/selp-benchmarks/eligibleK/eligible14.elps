@@ -1,0 +1,40 @@
+sorts
+#s1={mike, mary, nancy, paul, pat, peter, sam, tim, tom, van, vic, walt, will, yan}.
+
+predicates
+eligible(#s1).
+interview(#s1).
+highGPA(#s1).
+fairGPA(#s1).
+minority(#s1).
+student(#s1).
+
+rules
+eligible(X) :- highGPA(X).
+eligible(X) :- minority(X), fairGPA(X).
+-eligible(X) :- -fairGPA(X), -highGPA(X).
+interview(X) :- not K$ eligible(X), not K$ -eligible(X).
+
+fairGPA(mary)|highGPA(mary).
+minority(mary).
+fairGPA(mike)|highGPA(mike).
+highGPA(nancy).
+fairGPA(paul).
+minority(paul).
+fairGPA(pat).
+minority(peter)|highGPA(peter).
+fairGPA(sam)|highGPA(sam).
+minority(sam).
+highGPA(tim).
+-highGPA(tom).
+-fairGPA(tom)|minority(tom).
+-highGPA(van).
+-fairGPA(van).
+minority(van).
+fairGPA(vic)|highGPA(vic).
+minority(vic).
+fairGPA(walt).
+minority(walt).
+highGPA(will).
+fairGPA(yan).
+-minority(yan).

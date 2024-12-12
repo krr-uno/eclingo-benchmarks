@@ -1,0 +1,5 @@
+asp-comp/
+idlv/
+results/
+problem-selection/problems.txt
+*/__pycache__

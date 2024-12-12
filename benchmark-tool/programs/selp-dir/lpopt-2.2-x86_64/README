@@ -1,0 +1,11 @@
+lpopt is a tool to decompose logic programming rules, given in the syntax of answer set programming, into smaller, more manageable rules, that are easier for current ASP solvers and grounders to handle. This is done via a tree decomposition of the original rule, where each node of the tree decomposition then induces a rule. All of the resulting rules combined can then replace the original rule, resulting in the same answer sets (up to some temporary atoms). The maximum size of the resulting rules is no larger than the treewidth of the original rule.
+
+Compilation dependencies:
+* htdlib 1.0.0 beta1 (Nov 8 2016) - https://github.com/mabseher/htd
+* GNU bison 3.0.4
+* GNU flex (tested with version 2.6.1)
+* GNU make
+
+Runtime dependencies:
+* htdlib 1.0.0 beta1
+

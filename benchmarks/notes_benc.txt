@@ -1,0 +1,21 @@
+SELP
+
+    - Yale instances:
+        5, 7-25 -> solver error - set to 600s
+
+    - Eligible instances:
+        0165 - 9968 -> solver error - set to 600s
+
+    - Bomb instances:
+
+
+elp2qasp
+
+    - Yale instances:
+        5, 7-25 -> solver error - set to 600s
+
+    - Eligible instances:
+        0030 - 0232 -> solver timeout error
+        0244 - 9968 -> qasp: error: std::bad_alloc
+
+    - Bomb instances:

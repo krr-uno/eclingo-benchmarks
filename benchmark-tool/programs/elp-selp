@@ -1,0 +1,11 @@
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+${SCRIPT_DIR}/easp-km2easp-not.sh |
+${SCRIPT_DIR}/easpGrounder.py --gringo ~/miniconda3/envs/ep_asp/bin/gringo >  temp.elps
+sed -i '/^:-\.$/d' temp.elps
+cat temp.elps | 
+${SCRIPT_DIR}/easp2asp.py --htd_main  ${SCRIPT_DIR}/selp-dir/lpopt-2.2-x86_64/htd-1.2/build/bin/htd_main | 
+${SCRIPT_DIR}/selp-dir/lpopt-2.2-x86_64/lpopt | 
+~/miniconda3/envs/ep_asp/bin/clingo --outf=2 --sat-prepro=3 | 
+${SCRIPT_DIR}/groupWorldViews.py
+rm -f temp.elps

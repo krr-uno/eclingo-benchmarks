@@ -1,0 +1,7 @@
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+${SCRIPT_DIR}/easp-km2easp-not.sh |
+${SCRIPT_DIR}/easpGrounder.py -s ELP |
+${SCRIPT_DIR}/easp-not2easp-km.sh |
+python ${SCRIPT_DIR}/elp2qasp.py |
+${SCRIPT_DIR}/qasp

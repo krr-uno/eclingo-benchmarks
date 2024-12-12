@@ -1,0 +1,13 @@
+SATISFIABLE
+Some World View: in={'$not$ n_eligible(mary)', '$not$ n_eligible(mike)', '$not$ eligible(mike)', '$not$ n_eligible(nancy)', '$not$ n_eligible(paul)'}, out={'$not$ eligible(mary)', '$not$ eligible(nancy)', '$not$ eligible(paul)'}
+  Some Answer Set of this World View:
+    eligible(mary)
+    eligible(nancy)
+    eligible(paul)
+    fairGPA(mike)
+    fairGPA(paul)
+    highGPA(mary)
+    highGPA(nancy)
+    interview(mike)
+    minority(mary)
+    minority(paul)

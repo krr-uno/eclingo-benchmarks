@@ -1,0 +1,16 @@
+Parameters: debug =  False  planning =  False heuristic =  True initials_only =  False  eiter =  False  brave_cautious =  True  goal_directed_mode =  False  and nmax =  0
+Belief set of world view:   1 
+[s1(paul), s1(nancy), s1(mary), s1(mike), highGPA(mike), highGPA(nancy), eligible(paul), eligible(mike), eligible(mary), eligible(nancy), fairGPA(mary), fairGPA(paul), minority(paul), minority(mary), interview(mike), _model(2)] 
+
+Belief set of world view:   2 
+[s1(paul), s1(nancy), s1(mary), s1(mike), highGPA(nancy), eligible(paul), eligible(mary), eligible(nancy), fairGPA(mike), fairGPA(mary), fairGPA(paul), minority(paul), minority(mary), interview(mike), _model(2)] 
+
+Belief set of world view:   3 
+[s1(paul), s1(nancy), s1(mary), s1(mike), highGPA(mike), highGPA(mary), highGPA(nancy), eligible(paul), eligible(mike), eligible(mary), eligible(nancy), fairGPA(paul), minority(paul), minority(mary), interview(mike), _model(2)] 
+
+Belief set of world view:   4 
+[s1(paul), s1(nancy), s1(mary), s1(mike), highGPA(mary), highGPA(nancy), eligible(paul), eligible(mary), eligible(nancy), fairGPA(mike), fairGPA(paul), minority(paul), minority(mary), interview(mike), _model(2)] 
+
+Number of guesses checked:  1
+K & M atoms:  [k1_eligible(paul), k1_eligible(nancy), k1_eligible(mary)] [k0_eligible(mike), k0_0eligible(paul), k0_0eligible(nancy), k0_0eligible(mary), k0_0eligible(mike)]
+Elapsed time:  0:00:00.022805

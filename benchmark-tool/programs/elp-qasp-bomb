@@ -1,0 +1,8 @@
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+${SCRIPT_DIR}/easp-km2easp-not.sh |
+${SCRIPT_DIR}/easpGrounder.py -s ELP |
+${SCRIPT_DIR}/easp-not2easp-km.sh |
+python ${SCRIPT_DIR}/elp2qasp.py > temp.aspq
+java -Xmx1g -Xms512m -Xss512k -XX:ReservedCodeCacheSize=256m -XX:HeapBaseMinAddress=4g -jar ${SCRIPT_DIR}/qasp.jar -m temp.aspq
+rm -f temp.aspq

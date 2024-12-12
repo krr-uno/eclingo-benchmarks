@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% arguments %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% input: input_length(L).
+max_length(L)   :- input_length(L).
+num_packages(L) :- input_length(L).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% initial states %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+package(1).
+package(N+1) :- package(N), num_packages(NP), N < NP.
+
+armed(P,0) | -armed(P,0) :- package(P).
+:- not some_armed.
+some_armed :- armed(P,0).
+:- armed(P1,0), armed(P2,0), P1 != P2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% problem description %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%  executable  %%%%%%%
+executable_dunk(P, T) :- package(P), step(T), not dunked(P,T).
+
+%%%%%  direct effects   %%%%%%%
+-armed(P,  T+1) :- dunk(P, T), step(T).
+ dunked(P, T+1) :- dunk(P, T), step(T).
+
+%%%%%  indirect effects   %%%%%%%
+ unsafe(T) :- armed(P ,T), step(T).
+-unsafe(T) :- not unsafe(T), step(T).

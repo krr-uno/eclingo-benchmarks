@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -pedantic -Wextra -O3 -DNDEBUG -rdynamic CMakeFiles/htd_main.dir/main.cpp.o -o ../../bin/htd_main-1.2.0  -Wl,-rpath,/gpfs1/home/e/l/elillopo/eclingo-benchmark/selp/lpopt-2.2-x86_64/htd-1.2/build/lib: ../../lib/libhtd.so.0.0.0 ../../lib/libhtd_io.so.0.0.0 ../../lib/libhtd_cli.so.0.0.0 
